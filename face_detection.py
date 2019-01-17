@@ -7,19 +7,18 @@ def train(t):
         training = pickle.load(f)
     clf = ViolaJones(T=t)
     clf.train(training, 2429, 4548)
-
+    evaluate(clf, training)
     clf.save(str(t))
-    correct = 0
-    for x, y in training:
-        correct += 1 if clf.classify(x) == y else 0
-    print("Classified %d out of %d training examples" % (correct, len(training)))
 
 def test(filename):
     with open("test.pkl", 'rb') as f:
         test = pickle.load(f)
     
     clf = ViolaJones.load(filename)
+    evaluate(clf, test)
+    
+def evaluate(clf, data):
     correct = 0
-    for x, y in training:
+    for x, y in data:
         correct += 1 if clf.classify(x) == y else 0
-    print("Classified %d out of %d test examples" % (correct, len(training)))
+    print("Classified %d out of %d test examples" % (correct, len(data)))

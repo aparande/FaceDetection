@@ -1,5 +1,5 @@
 # FaceDetection
-Face Detection in Python using the Viola-Jones algorithm on the CBCL Face Database published by MIT's Center for Biological and Computational Learning.
+Face Detection in Python using the Viola-Jones algorithm on the CBCL Face Database published by MIT's Center for Biological and Computational Learning. Learn how it works by reading https://medium.com/@parandea1.7/understanding-and-implementing-the-viola-jones-image-classification-algorithm-85621f7fe20b
 
 # Contents
 - viola_jones.py
