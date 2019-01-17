@@ -22,4 +22,4 @@ def test(filename):
     correct = 0
     for x, y in training:
         correct += 1 if clf.classify(x) == y else 0
-    print("Classified %d out of %d training examples" % (correct, len(training)))
+    print("Classified %d out of %d test examples" % (correct, len(training)))
